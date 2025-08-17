@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每个li悬停显示不同图片</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .text-list {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem 1rem 1rem;
+        }
+        
+        .text-list ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .text-list li {
+            color: #fff;
+            padding: 0.5rem 0.75rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative; /* 作为图片的定位容器 */
+            white-space: nowrap; /* 防止文字换行 */
+        }
+        
+        /* 悬停时文字变色 */
+        .text-list li:hover {
+            color: #FF8C00; /* 橘色 */
+            transform: translateY(-2px);
+        }
+        
+        /* 图片容器样式 - 默认隐藏 */
+        .hover-image {
+            position: absolute;
+            bottom: calc(100% + 8px); /* 定位在文字正上方，加8px间距 */
+            left: 50%;
+            transform: translateX(-50%); /* 水平居中对齐文字 */
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10;
+            pointer-events: none; /* 图片不干扰鼠标事件 */
+            object-fit: cover; /* 保持图片比例 */
+        }
+        
+        /* 为图片添加小三角指示器 */
+        .hover-image::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px 6px 0;
+            border-style: solid;
+            border-color: #fff transparent transparent;
+            box-shadow: 0 4px 4px -4px rgba(0,0,0,0.2);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .text-list ul {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                justify-content: center;
+            }
+            
+            .text-list li {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.6rem;
+            }
+            
+            .hover-image {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-4">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6 text-gray-800 text-center">每个li悬停显示不同图片</h2>
+        
+        <div class="image-container">
+            <!-- 主图片 -->
+            <img src="./resouse/登临意/page1.jpg" alt="自然风景主图" class="w-full">
+            
+            <!-- 文字列表容器 -->
+            <div class="text-list">
+                <ul>
+                    <li>
+                        景点介绍
+                        <img src="./resouse/登临意/qiubai-activity.png" alt="景点介绍图片" class="hover-image">
+                    </li>
+                    <li>
+                        开放时间
+                        <img src="./resouse/登临意/chen-activity.png" alt="开放时间图片" class="hover-image">
+                    </li>
+                    <li>
+                        门票信息
+                        <img src="./resouse/登临意/chongyve-activity.png" alt="门票信息图片" class="hover-image">
+                    </li>
+                    <li>
+                        交通指南
+                        <img src="./resouse/登临意/lin-activity.png" alt="交通指南图片" class="hover-image">
+                    </li>
+                    <li>
+                        游客评价
+                        <img src="./resouse/登临意/woman1-activity.png" alt="游客评价图片" class="hover-image">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
