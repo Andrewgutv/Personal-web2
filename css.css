@@ -30,8 +30,11 @@ body {
 }
 
 .banner img {
+    position: relative;
     width: 100%;
     height: 1000px;
+    left:0px;
+
     /* z-index: 1; */
 }
 
@@ -160,4 +163,305 @@ body {
     left: 1230px;
     z-index: 10;
     transition: all 0.3s ease;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration:  none;
+}
+li,ol,ul {
+    list-style: none;
+}
+
+.page2 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 900px;
+}
+
+.base-image-2 {
+    width: 100%;
+    height: 1110px;
+    /* display: block; */
+}
+
+
+.page2 .focus {
+    position: absolute;
+    width: 1000px;
+    height: 1100px;
+    top: -10px;
+    /* background-color: pink; */
+    margin: 10px auto;
+    overflow: hidden;
+    
+}
+
+.page2 .focus ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 600%;
+
+}
+
+.page2 .focus ul li {
+    float: left;
+}
+
+.page2 .focus ul li img {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    left: 0px;
+    /* display: block; */
+    /* object-fit: cover; */
+    align-content: flex-start;
+}
+
+.page2 .arrow-l,.arrow-r {
+    position: absolute;
+    font-family: 'icomoon';
+    width: 24px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.page2 .arrow-r {
+    right: 0;
+}
+
+.page2 .circle {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+}
+
+.page2 .circle li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.page2 .current {
+    background-color: #fff;
+}
+
+.page2 .focus ul li .img1 {
+    top: 80px;
+}
+
+.page2 .contend {
+    position: absolute;
+    width: 450px;
+    height: 697px;
+    top: 250px;
+    right: 100px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.page2 .contend h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.page2 .contend p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    text-indent: 2em;
+    overflow-y: auto;
+    height: 580px;
+    scrollbar-width: none;
+}
+
+.page3 {
+    display: flex;
+    position: relative;
+    top: 210px;
+    width: 100%;
+    height: 1000px;
+
+}
+
+
+.page3 .focus {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    top: -10px;
+    /* background-color: pink; */
+    margin: 10px auto;
+    overflow: hidden;
+    
+}
+
+.page3 .focus ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 600%;
+
+}
+
+.page3 .focus ul li {
+    position: relative;
+    float: left;
+    /* height: 1000px; */
+}
+
+.page3 .focus ul li img {
+    position: relative;
+    top: -80px;
+    width: 1000px;
+    height: 1000px;
+    left: 0px;
+    /* display: block; */
+    /* object-fit: cover; */
+    align-content: flex-start;
+}
+
+.page3 .arrow-l,.arrow-r {
+    position: absolute;
+    font-family: 'icomoon';
+    width: 24px;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.page3 .arrow-r {
+    right: 0;
+}
+
+.page3 .circle {
+    position: absolute;
+    bottom: 10px;
+    left: 47%;
+}
+
+.page3 .circle li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.page3 .current {
+    background-color: #fff;
+}
+
+.page3 .focus ul li .img1 {
+    top: 1px;
+}
+
+/* 在现有样式基础上添加以下代码 */
+.page3 .contend {
+    position: absolute;
+    width: 450px; /* 宽度与page2保持一致 */
+    height: 697px; /* 高度与page2保持一致 */
+    top: 250px; /* 垂直位置与page2保持一致 */
+    right: 100px; /* 固定在右侧 */
+    background-color: rgba(0,0,0,0.3); /* 半透明背景 */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px; /* 圆角效果 */
+}
+
+/* 确保page3的h1和p样式正确应用 */
+.page3 .contend h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.page3 .contend p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    text-indent: 2em;
+    overflow-y: auto;
+    height: 580px;
+    scrollbar-width: none;
+}
+
+
+.footer {
+    position: relative;
+    height: 580px;
+    top: 210px;
+    background-color: #423735;
+}
+
+
+/* 页脚样式 */
+.footer {
+    width: 100%;
+    height: 250px;
+    background-color: #333; /* 与导航栏同色，保持风格统一 */
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 50px;
+     /* 与上方内容保持距离 */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 链接之间的间距 */
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: orange; /* 与导航项 hover 效果一致 */
 }
