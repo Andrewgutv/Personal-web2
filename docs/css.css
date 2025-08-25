@@ -16,17 +16,36 @@ body {
     overflow-x: hidden;
 }
 
-.nav {
+/* .nav {
     position: fixed;
     width: 2549px;
     height: 47px;
     background-color: #333;
     z-index: 10;
+} */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 47px; /* 与nav高度一致 */
+    background-color: #333; /* 与nav同色 */
+    z-index: 11; /* 确保在nav上方 */
 }
 
 .banner {
     display: flex;
     position: relative;
+}
+
+.banner::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, #423735, rgba(0,0,0,0));
 }
 
 .banner img {
@@ -51,6 +70,8 @@ body {
 .banner .iconfont:hover {
     transform: translateY(2px);
 }
+
+
 
 .spot {
             position: absolute;
@@ -464,4 +485,49 @@ li,ol,ul {
 
 .footer-links a:hover {
     color: orange; /* 与导航项 hover 效果一致 */
+}
+
+.music {
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    z-index: 999;
+}
+img#musicico{
+	animation-name: music;
+	animation-timing-function: linear; 
+	animation-duration: 3s; 
+	animation-iteration-count: infinite; 
+}
+.musw{
+    cursor: pointer;
+    position: fixed;
+    bottom: 40px;
+    right: 35px;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+}
+/* 实现动画的旋转 */
+@keyframes music{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	100%{
+		transform: rotate(365deg);
+	}
+}
+
+.yinyue {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 400px;
+    box-sizing: border-box;
+    overflow: hidden;
 }

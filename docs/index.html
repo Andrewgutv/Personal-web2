@@ -14,10 +14,18 @@
     <div class="nav">
         <div class="header"></div>
     </div>
+
     <div class="banner">
         <img src="./resource/banner.png" alt="" >
-        <div class="iconfont icon-a-xiala2"></div>
+        <div id="scrollToContainer" class="iconfont icon-a-xiala2"></div>
     </div>
+
+    <div class="yinyve">
+        <img id="musicico"  class="music" src="./resource/changpian.png"  onclick="musiccc()"/>
+        <img id="musw"  class="musw" src="./resource/qiege.png"  title="切歌" onclick="nextMusic()"/>
+        <audio id="music" autoplay="autoplay" src="" preload="auto"></audio>
+    </div>
+
     <div class="container">
         <img src="./resource/page1.jpg" alt="" class="base-image">
         <div class="list-wrapper">
