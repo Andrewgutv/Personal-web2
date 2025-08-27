@@ -136,7 +136,7 @@ body {
 }
 
 .list-wrapper li:nth-child(1):hover::after {
-    content: url(./resource/chen_activity.png);
+    content: url(./Personal-web2/resource/chen_activity.png);
     position: absolute;
     top: -580px;
     left: -30px;
@@ -145,7 +145,7 @@ body {
 }
 
 .list-wrapper li:nth-child(2):hover::after {
-    content: url(./resource/qiubai_activity.png);
+    content: url(./Personal-web2/resource/qiubai_activity.png);
     position: absolute;
     top: -580px;
     left: -30px;
@@ -153,7 +153,7 @@ body {
     transition: all 0.3s ease;
 }
 .list-wrapper li:nth-child(3):hover::after {
-    content: url(./resource/shouren_activity.png);
+    content: url(./Personal-web2/resource/shouren_activity.png);
     position: absolute;
     top: -640px;
     left: 300px;
@@ -161,7 +161,7 @@ body {
     transition: all 0.3s ease;
 }
 .list-wrapper li:nth-child(4):hover::after {
-    content: url(./resource/chongyve_activity.png);
+    content: url(./Personal-web2/resource/chongyve_activity.png);
     position: absolute;
     top: -550px;
     left: 280px;
@@ -170,7 +170,7 @@ body {
     /* transform: scale(1.2); */
 }
 .list-wrapper li:nth-child(5):hover::after {
-    content: url(./resource/lin_activity.png);
+    content: url(./Personal-web2/resource/lin_activity.png);
     position: absolute;
     top: -600px;
     left: 730px;
@@ -178,7 +178,7 @@ body {
     transition: all 0.3s ease;
 }
 .list-wrapper li:nth-child(6):hover::after {
-    content: url(./resource/woman1_activity.png);
+    content: url(./Personal-web2/resource/woman1_activity.png);
     position: absolute;
     top: -370px;
     left: 1230px;
